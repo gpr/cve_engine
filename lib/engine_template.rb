@@ -1,4 +1,2 @@
-require "engine_template/engine"
+require 'engine_template/engine'
 
-module EngineTemplate
-end
