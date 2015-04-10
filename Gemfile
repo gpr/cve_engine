@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-# Declare your gem's dependencies in engine_template.gemspec.
+# Declare your gem's dependencies in rails_engine_template.gemspec.
 # Bundler will treat runtime dependencies like base dependencies, and
 # development dependencies will be added by default to the :development group.
 gemspec
@@ -10,6 +10,30 @@ gemspec
 # Git. Remember to move these dependencies to your gemspec before releasing
 # your gem to rubygems.org.
 
-# To use a debugger
-# gem 'byebug', group: [:development, :test]
+group :development do
+  # FIXME use spring generates a lot of issues
+  # gem "spring"
+  gem 'better_errors'
+  gem 'binding_of_caller'
 
+  gem 'bootstrap-sass', '~> 3.3.1'
+  gem 'font-awesome-rails'
+  gem 'rails_admin'
+end
+
+group :development, :test do
+  gem 'byebug'
+
+  gem 'yard'
+  gem 'yard-minitest-spec'
+
+  gem 'factory_girl_rails'
+  gem 'minitest-spec-rails'
+  gem 'minitest-rails-capybara'
+  gem 'minitest-reporters'
+
+  gem 'simplecov'
+  gem 'simplecov-rcov'
+
+  gem 'sqlite3'
+end
