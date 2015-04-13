@@ -22,16 +22,19 @@
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="<%= root_path %>">Home</a></li>
-        <li class="active"><a href="<%= welcome_dashboard_path %>">Dashboard</a></li>
+        <li class="<%= menu_item_is_active(controller: 'welcome', action: 'home') %>"><a href="<%= root_path %>">Home</a></li>
+        <li class="<%= menu_item_is_active(controller: 'welcome', action: 'dashboard') %>"><a href="<%= welcome_dashboard_path %>">Dashboard</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Controllers <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Engine Controllers <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="">Home</a></li>
+            <li><a href="">NONE</a></li>
+            <% if controller_name != 'welcome' %>
             <li class="divider"></li>
+
             <li class="dropdown-header">Actions</li>
-            <li><%= link_to 'Index', action: 'index' if controller_name != 'welcome' %></li>
-            <li><%= link_to 'New', action: 'new' if controller_name != 'welcome' %></li>
+            <li><%= link_to 'Index', action: 'index'  %></li>
+            <li><%= link_to 'New', action: 'new' %></li>
+                <% end %>
           </ul>
         </li>
       </ul>
