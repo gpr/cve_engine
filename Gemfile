@@ -15,10 +15,6 @@ group :development do
   # gem "spring"
   gem 'better_errors'
   gem 'binding_of_caller'
-
-  gem 'bootstrap-sass', '~> 3.3.1'
-  gem 'font-awesome-rails'
-  gem 'rails_admin'
 end
 
 group :development, :test do
@@ -35,5 +31,8 @@ group :development, :test do
   gem 'simplecov'
   gem 'simplecov-rcov'
 
+  gem 'bootstrap-sass', '~> 3.3.1'
+  gem 'font-awesome-rails'
+  gem 'rails_admin'
   gem 'sqlite3'
 end
