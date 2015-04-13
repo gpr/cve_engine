@@ -28,7 +28,7 @@ group :development, :test do
   gem 'minitest-rails-capybara'
   gem 'minitest-reporters'
 
-  gem 'simplecov'
+  gem 'simplecov', require: false
   gem 'simplecov-rcov'
 
   gem 'bootstrap-sass', '~> 3.3.1'
