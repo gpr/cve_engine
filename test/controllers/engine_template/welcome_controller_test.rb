@@ -2,19 +2,27 @@ require 'test_helper'
 
 module EngineTemplate
   describe WelcomeController do
+
     before do
-        @routes = Engine.routes
+      @routes = Engine.routes
     end
 
-    it 'should get home' do
-      get :home
-      assert_response :success
+    describe '#home' do
+
+      it 'should be directly accessible' do
+        get :home
+        assert_response :success
+      end
+
     end
 
-    it 'should get dashboard' do
-      get :dashboard
-      assert_response :success
-    end
+    describe '#dashboard' do
 
+      it 'should be directly accessible' do
+        get :dashboard
+        assert_response :success
+      end
+
+    end
   end
 end
