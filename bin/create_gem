@@ -1,0 +1,50 @@
+#!/usr/bin/env ruby
+
+class String
+  def camelize
+    new = self.dup
+    new.camelize!
+  end
+  def camelize!
+    self.replace(self.split("_").each {|s| s.capitalize! }.join(""))
+  end
+end
+
+template_name = 'engine_template'
+template_class_name = template_name.camelize
+
+raise ArgumentError.new('usage: create_gem <new_name>') if ARGV.nil? or ARGV.size != 1
+
+new_name = ARGV.shift
+new_class_name = new_name.camelize
+
+puts "Creating new gem #{new_class_name} from template"
+
+gem_root = File.dirname __dir__
+
+Dir.glob(File.join(gem_root, '**/*')) do |file|
+  unless File.directory? file or /.*create_gem/.match(file) or /.*Gemfile\.lock/
+    puts file
+    text = File.read(file)
+    new_text = text.gsub(/#{template_name}/, new_name)
+    new_text = new_text.gsub(/#{template_class_name}/, new_class_name)
+    File.open(file, "w") {|file| file.puts new_text}
+  end
+end
+
+file = File.join(gem_root, '.ruby-gemset')
+text = File.read(file)
+new_text = text.gsub(/#{template_name}/, new_name)
+File.open(file, "w") {|file| file.puts new_text}
+
+Dir.glob("**/*#{template_name}*").select {|f| File.directory? f}.each do |dir|
+  puts "Rename #{dir}"
+  new_dirname = dir.gsub(template_name, "#{new_name}")
+  File.rename(dir, new_dirname)
+end
+
+Dir.glob("**/*#{template_name}*").select {|f| not File.directory? f}.each do |file|
+  puts "Rename #{file}"
+  new_filename = file.gsub(template_name, "#{new_name}")
+  File.rename(file, new_filename)
+end
