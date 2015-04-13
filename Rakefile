@@ -4,20 +4,28 @@ rescue LoadError
   puts 'You must `gem install bundler` and `bundle install` to run rake tasks'
 end
 
-require 'rdoc/task'
+# -----------------------------------------------------------------------------
+# Documentation task
+require 'yard'
 
-RDoc::Task.new(:rdoc) do |rdoc|
-  rdoc.rdoc_dir = 'rdoc'
-  rdoc.title    = 'EngineTemplate'
-  rdoc.options << '--line-numbers'
-  rdoc.rdoc_files.include('README.md')
-  rdoc.rdoc_files.include('lib/**/*.rb')
+YARD::Config.load_plugin('minitest-spec')
+YARD::Config.load_plugin('yard-activerecord')
+
+YARD::Rake::YardocTask.new do |t|
+  t.files = ['lib/**/*.rb', 'app/**/*.rb', 'db/schema.rb', 'test/**/*_test.rb']
+  t.stats_options = ['--list-undoc']
 end
+
+# -----------------------------------------------------------------------------
+# Loads tasks
 
 APP_RAKEFILE = File.expand_path("../test/dummy/Rakefile", __FILE__)
 load 'rails/tasks/engine.rake'
 
 Bundler::GemHelper.install_tasks
+
+# -----------------------------------------------------------------------------
+# Testing task
 
 require 'rake/testtask'
 

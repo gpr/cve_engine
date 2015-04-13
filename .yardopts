@@ -1,0 +1,3 @@
+--markup markdown
+--plugin yard-activerecord
+--plugin minitest-spec

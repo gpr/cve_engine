@@ -15,13 +15,15 @@ group :development do
   # gem "spring"
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'redcarpet'
+
+  gem 'yard'
+  gem 'yard-minitest-spec'
+  gem 'yard-activerecord'
 end
 
 group :development, :test do
   gem 'byebug'
-
-  gem 'yard'
-  gem 'yard-minitest-spec'
 
   gem 'factory_girl_rails'
   gem 'minitest-spec-rails'
