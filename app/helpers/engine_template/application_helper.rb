@@ -9,5 +9,9 @@ module EngineTemplate
       end
       active
     end
+
+    def version
+      @version
+    end
   end
 end
