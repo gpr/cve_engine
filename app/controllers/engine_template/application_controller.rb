@@ -1,6 +1,5 @@
 module EngineTemplate
   # Engine Application Controler
-  class ApplicationController < ActionController::Base
-    layout 'application'
+  class ApplicationController < ::ApplicationController
   end
 end
