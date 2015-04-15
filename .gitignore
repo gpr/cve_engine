@@ -10,3 +10,4 @@ test/dummy/.sass-cache
 coverage/
 doc/
 .yardoc/
+test/reports
