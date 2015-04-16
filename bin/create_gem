@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
+require 'ptools'
+
 class String
   def camelize
     new = self.dup
@@ -23,7 +25,7 @@ puts "Creating new gem #{new_class_name} from template"
 gem_root = File.dirname __dir__
 
 Dir.glob(File.join(gem_root, '**/*')) do |file|
-  unless File.directory? file or /.*create_gem/.match(file) or /.*Gemfile\.lock/
+  unless File.directory? file or /.*create_gem/.match(file) or /.*Gemfile\.lock/ or File.binary?(file)
     puts file
     text = File.read(file)
     new_text = text.gsub(/#{template_name}/, new_name)
