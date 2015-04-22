@@ -75,3 +75,6 @@ To create a new engine from the template:
 5. Commit the change `git commit -a -m "<new_name> gem created"`
 6. Push and set the upstream `git push --set-upstream origin master`
 
+## License
+
+Affero GPL V3 (see LICENSE file)

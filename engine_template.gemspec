@@ -11,10 +11,10 @@ Gem::Specification.new do |s|
   s.version     = EngineTemplate::VERSION
   s.authors     = ['Gregory Romé']
   s.email       = ['gregory.rome@gmail.com']
-  s.homepage    = ''
+  s.homepage    = 'https://github.com/gpr/engine_template'
   s.summary     = 'Summary of EngineTemplate.'
   s.description = 'Description of EngineTemplate.'
-  s.license     = 'PROPRIETARY'
+  s.license     = 'AGPL-3'
 
   s.files = Dir["{app,config,db,lib}/**/*", 'LICENSE', 'Rakefile', 'README.md']
   s.test_files = Dir['test/**/*']
