@@ -10,10 +10,10 @@ Gem::Specification.new do |s|
   s.name        = 'engine_template'
   s.version     = EngineTemplate::VERSION
   s.authors     = ['Gregory Romé']
-  s.email       = ["gregory.rome@gmail.com"]
-  s.homepage    = 'TODO'
-  s.summary     = 'TODO: Summary of EngineTemplate.'
-  s.description = 'TODO: Description of EngineTemplate.'
+  s.email       = ['gregory.rome@gmail.com']
+  s.homepage    = ''
+  s.summary     = 'Summary of EngineTemplate.'
+  s.description = 'Description of EngineTemplate.'
   s.license     = 'PROPRIETARY'
 
   s.files = Dir["{app,config,db,lib}/**/*", 'LICENSE', 'Rakefile', 'README.md']
