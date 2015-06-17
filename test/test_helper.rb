@@ -43,5 +43,9 @@ end
 
 require 'factory_girl_rails'
 
+class MiniTest::Test
+   include FactoryGirl::Syntax::Methods
+end
+
 # Load support files
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
