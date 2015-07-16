@@ -9,6 +9,12 @@ module EngineTemplate
   class Engine < ::Rails::Engine
     isolate_namespace EngineTemplate
 
+    config.to_prepare do
+      Rails.application.config.assets.precompile += %w(
+      editable/*
+    )
+    end
+
     config.generators do |g|
       g.test_framework :minitest, spec: true, fixture: false
       g.fixture_replacement :factory_girl, dir: 'test/factories'

@@ -13,5 +13,23 @@
 //= require jquery
 //= require jquery-ui
 //= require bootstrap-sprockets
+//= require best_in_place
+//= require best_in_place.purr
 //
 //= require_tree .
+
+
+$(document).ready(function() {
+    $('.best_in_place').best_in_place();
+    $('.best_in_place').bind("ajax:success", function() {
+            $(this).closest('tr').effect('highlight');
+        }
+    );
+    $('.best_in_place').bind("best_in_place:error", function() {
+            $(this).closest('tr').effect('shake');
+        }
+    );
+
+    $( 'notice' ).purr();
+});
+
