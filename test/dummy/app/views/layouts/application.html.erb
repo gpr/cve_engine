@@ -23,8 +23,8 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li class="<%= 'active' if current_page?(main_app.root_path) %>"><a href="<%= main_app.root_path %>">Home</a></li>
-        <%= active_nav_link('EngineTemplate Home',engine_template.welcome_home_path) %>
-        <%= active_nav_link('EngineTemplate Dashboard',engine_template.welcome_dashboard_path) %>
+        <%= active_nav_link('EngineTemplate Home', engine_template.welcome_home_path) %>
+        <%= active_nav_link('EngineTemplate Dashboard', engine_template.welcome_dashboard_path) %>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Engine Controllers <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
@@ -44,6 +44,25 @@
 </nav>
 
 <div class="container">
+
+  <% flash.each do |name, msgs| %>
+      <% if msgs.is_a?(Array) %>
+          <% msgs.each do |msg| %>
+              <div class="alert alert-<%= flash_bootstrap_alert(name) %> alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <i class="fa fa-<%= flash_fa_icon(name) %> fa-lg fa-fw"></i> <%= msg %>
+              </div>
+          <% end %>
+      <% else %>
+          <div class="alert alert-<%= flash_bootstrap_alert(name) %> alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <i class="fa fa-<%= flash_fa_icon(name) %> fa-lg fa-fw"></i> <%= msgs %>
+          </div>
+      <% end %>
+  <% end %>
+
+
+
   <div class="row">
     <%= yield %>
   </div>

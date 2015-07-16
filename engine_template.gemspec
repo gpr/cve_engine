@@ -26,6 +26,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'ruby-progressbar'
   s.add_dependency 'responders'
   s.add_dependency 'best_in_place'
+  s.add_dependency 'pundit'
 
   s.add_development_dependency 'ptools'
 end

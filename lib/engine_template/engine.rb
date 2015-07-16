@@ -4,16 +4,11 @@ require 'table-for'
 require 'simple_form'
 require 'gprrr'
 require 'best_in_place'
+require 'pundit'
 
 module EngineTemplate
   class Engine < ::Rails::Engine
     isolate_namespace EngineTemplate
-
-    config.to_prepare do
-      Rails.application.config.assets.precompile += %w(
-      editable/*
-    )
-    end
 
     config.generators do |g|
       g.test_framework :minitest, spec: true, fixture: false
@@ -21,6 +16,7 @@ module EngineTemplate
       g.factory_girl true
       g.assets false
       g.helper false
+      g.scaffold_controller :responders_controller
     end
 
     config.responders.flash_keys = [ :success, :failure ]

@@ -8,11 +8,13 @@ module EngineTemplate
     # GET /home
     # @return the home page
     def home
+      authorize :'EngineTemplate::Welcome', :home?
     end
 
     # GET /dashboard
     # @return the dashboard page
     def dashboard
+      authorize :'EngineTemplate::Welcome', :dashboard?
     end
   end
 end
