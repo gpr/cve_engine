@@ -20,5 +20,10 @@ module EngineTemplate
     end
 
     config.responders.flash_keys = [ :success, :failure ]
+
+    # test/factories is no longer a default path
+    initializer 'factories', after: 'factory_girl.set_factory_paths' do
+      FactoryGirl.definition_file_paths.unshift(File.join(File.dirname(__FILE__), '..', '..', 'test', 'factories')) if defined?(FactoryGirl)
+    end
   end
 end
