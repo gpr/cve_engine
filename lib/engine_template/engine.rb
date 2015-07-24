@@ -16,7 +16,8 @@ module EngineTemplate
       g.factory_girl true
       g.assets false
       g.helper false
-      g.scaffold_controller :responders_controller
+      # If templates are supplied with the engine
+      #g.templates.unshift File::expand_path('../templates', File.dirname(__FILE__))
     end
 
     config.responders.flash_keys = [ :success, :failure ]
