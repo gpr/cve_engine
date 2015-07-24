@@ -33,7 +33,8 @@ group :development, :test do
   gem 'minitest-reporters'
   gem 'guard'
   gem 'guard-minitest'
-  gem 'terminal-notifier-guard'
+  gem 'terminal-notifier-guard' # MAC OS
+  gem 'libnotify' # Linux
 
   gem 'simplecov', require: false
   gem 'simplecov-rcov'
