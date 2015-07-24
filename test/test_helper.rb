@@ -27,19 +27,9 @@ require 'rails/test_help'
 
 require 'minitest/rails'
 require 'minitest/rails/capybara'
-if ENV['MINITEST_PRIDE']
-  require 'minitest/pride'
-else
-require 'minitest/reporters'
-require 'ci/reporter/rake/minitest'
 
-Minitest::Reporters.use!(
-    [MiniTest::Reporters::SpecReporter.new,
-     MiniTest::Reporters::JUnitReporter.new('test/reports')],
-    ENV,
-    Minitest.backtrace_filter
-)
-end
+require 'minitest/reporters'
+MiniTest::Reporters.use!
 
 require 'factory_girl_rails'
 

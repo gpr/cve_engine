@@ -31,7 +31,9 @@ group :development, :test do
   gem 'minitest-spec-rails'
   gem 'minitest-rails-capybara'
   gem 'minitest-reporters'
-  gem 'ci_reporter_minitest'
+  gem 'guard'
+  gem 'guard-minitest'
+  gem 'terminal-notifier-guard'
 
   gem 'simplecov', require: false
   gem 'simplecov-rcov'
