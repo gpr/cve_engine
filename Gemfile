@@ -37,6 +37,7 @@ group :development, :test do
   gem 'simplecov-rcov'
 
   gem 'bootstrap-sass', '~> 3.3.1'
+  gem 'kaminari-bootstrap', '~> 3'
   gem 'font-awesome-rails'
   gem 'rails_admin'
   gem 'sqlite3'
