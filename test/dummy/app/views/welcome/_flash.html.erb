@@ -1,0 +1,15 @@
+  <% flash.each do |name, msgs| %>
+      <% if msgs.is_a?(Array) %>
+          <% msgs.each do |msg| %>
+              <div class="alert alert-<%= flash_bootstrap_alert(name) %> alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                <i class="fa fa-<%= flash_fa_icon(name) %> fa-lg fa-fw"></i> <%= msg %>
+              </div>
+          <% end %>
+      <% else %>
+          <div class="alert alert-<%= flash_bootstrap_alert(name) %> alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <i class="fa fa-<%= flash_fa_icon(name) %> fa-lg fa-fw"></i> <%= msgs %>
+          </div>
+      <% end %>
+  <% end %>

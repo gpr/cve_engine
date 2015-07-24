@@ -45,6 +45,7 @@
 
 <div class="container">
 
+  <div id="flash">
   <% flash.each do |name, msgs| %>
       <% if msgs.is_a?(Array) %>
           <% msgs.each do |msg| %>
@@ -60,7 +61,7 @@
           </div>
       <% end %>
   <% end %>
-
+  </div>
 
 
   <div class="row">
