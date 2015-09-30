@@ -1,13 +1,3 @@
-GIT
-  remote: git://github.com/gpr/gprrr.git
-  revision: 67535bb3d17423e8282704ee1d8cdaa87e819d96
-  specs:
-    gprrr (0.1.0.beta1)
-      configatron
-      mail
-      rails (~> 4.2)
-      ruby-progressbar
-
 PATH
   remote: .
   specs:
@@ -19,6 +9,15 @@ PATH
       ruby-progressbar
       simple_form
       table-for
+
+PATH
+  remote: vendor/gems/gprrr
+  specs:
+    gprrr (0.1.0.beta1)
+      configatron
+      mail
+      rails (~> 4.2)
+      ruby-progressbar
 
 GEM
   remote: https://rubygems.org/

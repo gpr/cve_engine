@@ -21,7 +21,7 @@ group :development do
   gem 'yard-minitest-spec'
   gem 'yard-activerecord'
 
-  gem 'gprrr', github: 'gpr/gprrr'
+  gem 'gprrr', path: 'vendor/gems/gprrr'
 end
 
 group :development, :test do

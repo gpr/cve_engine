@@ -1,0 +1,3 @@
+[submodule "vendor/gems/gprrr"]
+	path = vendor/gems/gprrr
+	url = git@github.com:gpr/gprrr.git
