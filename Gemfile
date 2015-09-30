@@ -20,6 +20,8 @@ group :development do
   gem 'yard'
   gem 'yard-minitest-spec'
   gem 'yard-activerecord'
+
+  gem 'gprrr', github: 'gpr/gprrr'
 end
 
 group :development, :test do
@@ -38,4 +40,6 @@ group :development, :test do
   gem 'font-awesome-rails'
   gem 'rails_admin'
   gem 'sqlite3'
+  gem 'devise'
+  gem 'pundit'
 end

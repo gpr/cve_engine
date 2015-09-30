@@ -24,6 +24,8 @@ Gem::Specification.new do |s|
   s.add_dependency 'table-for'
   s.add_dependency 'kaminari'
   s.add_dependency 'ruby-progressbar'
+  s.add_dependency 'responders'
+  s.add_dependency 'best_in_place'
 
   s.add_development_dependency 'ptools'
 end

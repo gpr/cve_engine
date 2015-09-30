@@ -1,3 +1,10 @@
+require 'responders'
+require 'kaminari'
+require 'table-for'
+require 'simple_form'
+require 'gprrr'
+require 'best_in_place'
+
 module EngineTemplate
   class Engine < ::Rails::Engine
     isolate_namespace EngineTemplate
@@ -9,5 +16,7 @@ module EngineTemplate
       g.assets false
       g.helper false
     end
+
+    config.responders.flash_keys = [ :success, :failure ]
   end
 end
