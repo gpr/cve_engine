@@ -5,6 +5,19 @@ source 'https://rubygems.org'
 # development dependencies will be added by default to the :development group.
 gemspec
 
+# Windows
+def windows_only(require_as)
+  RbConfig::CONFIG['host_os'] =~ /mingw|mswin/i ? require_as : false
+end
+# Linux
+def linux_only(require_as)
+  RbConfig::CONFIG['host_os'] =~ /linux/ ? require_as : false
+end
+# Mac OS X
+def macos_only(require_as)
+  RbConfig::CONFIG['host_os'] =~ /darwin/ ? require_as : false
+end
+
 # Declare any dependencies that are still in development here instead of in
 # your gemspec. These might include edge Rails or gems from your path or
 # Git. Remember to move these dependencies to your gemspec before releasing
@@ -33,8 +46,8 @@ group :development, :test do
   gem 'minitest-reporters'
   gem 'guard'
   gem 'guard-minitest'
-  gem 'terminal-notifier-guard' # MAC OS
-  gem 'libnotify' # Linux
+  gem 'terminal-notifier-guard', require: macos_only('terminal-notifier-guard')
+  gem 'libnotify', require: linux_only('libnotify')
 
   gem 'simplecov', require: false
   gem 'simplecov-rcov'
