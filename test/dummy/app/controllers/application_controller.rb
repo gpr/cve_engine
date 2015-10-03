@@ -5,6 +5,6 @@ class ApplicationController < ActionController::Base
   include Pundit
 
   def current_user
-    User.where(is_admin: true).first
+    User.admins.first
   end
 end

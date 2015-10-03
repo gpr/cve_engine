@@ -1,8 +1,8 @@
 class User < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
+  # :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable,
+         :confirmable, :lockable, :timeoutable
     # -----------------------------------------------------
     # Constants
 
@@ -13,12 +13,14 @@ class User < ActiveRecord::Base
     # Validations
 
     # Instance methods
-
+    def guest?
+      false
+    end
 
     # -----------------------------------------------------
     # Class methods
-    def guest?
-      false
+    def self.admins
+      User.where name: 'Admin'
     end
 
     # -----------------------------------------------------
@@ -30,8 +32,10 @@ class User < ActiveRecord::Base
     rails_admin do
       list do
       end
+
       show do
       end
+
       edit do
       end
 

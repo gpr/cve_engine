@@ -5,6 +5,7 @@ module EngineTemplate
 
     before do
       @routes = Engine.routes
+      create(:admin)
     end
 
     describe '#home' do
