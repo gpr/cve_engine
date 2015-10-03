@@ -48,6 +48,7 @@ group :development, :test do
   gem 'guard-minitest'
   gem 'terminal-notifier-guard', require: macos_only('terminal-notifier-guard')
   gem 'libnotify', require: linux_only('libnotify')
+  gem 'faker'
 
   gem 'simplecov', require: false
   gem 'simplecov-rcov'
