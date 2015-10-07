@@ -44,10 +44,10 @@ group :development, :test do
   gem 'minitest-spec-rails'
   gem 'minitest-rails-capybara'
   gem 'minitest-reporters'
-  gem 'guard'
-  gem 'guard-minitest'
   gem 'terminal-notifier-guard', require: macos_only('terminal-notifier-guard')
   gem 'libnotify', require: linux_only('libnotify')
+  gem 'guard', require: false
+  gem 'guard-minitest', require: false
   gem 'faker'
 
   gem 'simplecov', require: false
