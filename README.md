@@ -1,4 +1,4 @@
-# EngineTemplate
+# CveEngine
 
 Template for quickly creating new Rails engine.
 
@@ -9,7 +9,7 @@ Template for quickly creating new Rails engine.
 
 Add these lines to your application's Gemfile:
 
-    gem 'engine_template'
+    gem 'cve_engine'
 
 And then execute:
 
@@ -19,7 +19,7 @@ And then execute:
 
 Add this line to your gemspec file:
 
-    spec.add_runtime_dependency 'engine_template'
+    spec.add_runtime_dependency 'cve_engine'
 
 And then execute:
 
@@ -30,7 +30,7 @@ And then execute:
 
 To use the engine in a Rails application add the engine to the Gemfile and create the migrations:
 
-    $ rake engine_template:install:migrations
+    $ rake cve_engine:install:migrations
 
 
 ## Test

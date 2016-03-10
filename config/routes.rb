@@ -1,4 +1,4 @@
-EngineTemplate::Engine.routes.draw do
+CveEngine::Engine.routes.draw do
   get 'welcome/home'
   get 'welcome/dashboard'
   root 'welcome#home'

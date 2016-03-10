@@ -1,4 +1,4 @@
-module EngineTemplate
+module CveEngine
   # Engine Application Controler
   class ApplicationController < ::ApplicationController
 

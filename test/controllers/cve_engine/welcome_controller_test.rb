@@ -1,6 +1,6 @@
 require 'test_helper'
 
-module EngineTemplate
+module CveEngine
   describe WelcomeController do
 
     before do

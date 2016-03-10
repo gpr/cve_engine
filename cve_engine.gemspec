@@ -3,17 +3,17 @@
 $:.push File.expand_path("../lib", __FILE__)
 
 # Maintain your gem's version:
-require 'engine_template/version'
+require 'cve_engine/version'
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = 'engine_template'
-  s.version     = EngineTemplate::VERSION
+  s.name        = 'cve_engine'
+  s.version     = CveEngine::VERSION
   s.authors     = ['Gregory Romé']
   s.email       = ['gregory.rome@gmail.com']
-  s.homepage    = 'https://github.com/gpr/engine_template'
-  s.summary     = 'Summary of EngineTemplate.'
-  s.description = 'Description of EngineTemplate.'
+  s.homepage    = 'https://github.com/gpr/cve_engine'
+  s.summary     = 'Summary of CveEngine.'
+  s.description = 'Description of CveEngine.'
   s.license     = 'AGPL-3'
 
   s.files = Dir["{app,config,db,lib}/**/*", 'LICENSE', 'Rakefile', 'README.md']

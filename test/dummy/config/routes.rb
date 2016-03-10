@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   get 'welcome/home'
   get 'welcome/get_flash'
 
-  mount EngineTemplate::Engine => '/engine_template'
+  mount CveEngine::Engine => '/cve_engine'
   root 'welcome#home'
 end

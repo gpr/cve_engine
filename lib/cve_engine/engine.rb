@@ -6,9 +6,9 @@ require 'gprrr'
 require 'best_in_place'
 require 'pundit'
 
-module EngineTemplate
+module CveEngine
   class Engine < ::Rails::Engine
-    isolate_namespace EngineTemplate
+    isolate_namespace CveEngine
 
     config.generators do |g|
       g.test_framework :minitest, spec: true, fixture: false

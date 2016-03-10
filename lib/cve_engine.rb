@@ -1,6 +1,6 @@
-require 'engine_template/engine'
+require 'cve_engine/engine'
 
-module EngineTemplate
+module CveEngine
   @@configured = false
   @@user_class = 'User'
 

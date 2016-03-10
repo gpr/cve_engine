@@ -1,6 +1,6 @@
-require_dependency 'engine_template/application_controller'
+require_dependency 'cve_engine/application_controller'
 
-module EngineTemplate
+module CveEngine
   # Default controller
   #
   # Has no related model
@@ -8,13 +8,13 @@ module EngineTemplate
     # GET /home
     # @return the home page
     def home
-      authorize :'EngineTemplate::Welcome', :home?
+      authorize :'CveEngine::Welcome', :home?
     end
 
     # GET /dashboard
     # @return the dashboard page
     def dashboard
-      authorize :'EngineTemplate::Welcome', :dashboard?
+      authorize :'CveEngine::Welcome', :dashboard?
     end
   end
 end

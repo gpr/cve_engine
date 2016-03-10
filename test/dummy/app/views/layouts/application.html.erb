@@ -23,8 +23,8 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li class="<%= 'active' if current_page?(main_app.root_path) %>"><a href="<%= main_app.root_path %>">Home</a></li>
-        <%= active_nav_link('EngineTemplate Home', engine_template.welcome_home_path) %>
-        <%= active_nav_link('EngineTemplate Dashboard', engine_template.welcome_dashboard_path) %>
+        <%= active_nav_link('CveEngine Home', cve_engine.welcome_home_path) %>
+        <%= active_nav_link('CveEngine Dashboard', cve_engine.welcome_dashboard_path) %>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Engine Controllers <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">

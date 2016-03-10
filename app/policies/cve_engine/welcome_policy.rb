@@ -1,4 +1,4 @@
-module EngineTemplate
+module CveEngine
   class WelcomePolicy < Struct.new(:user, :welcome)
     def dashboard?
       user and not user.guest?

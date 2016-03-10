@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    engine_template (0.1.0.beta1)
+    cve_engine (0.1.0.beta1)
       best_in_place
       kaminari
       pundit
@@ -319,7 +319,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3.1)
   byebug
   devise
-  engine_template!
+  cve_engine!
   factory_girl_rails
   faker
   font-awesome-rails

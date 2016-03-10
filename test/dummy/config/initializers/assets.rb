@@ -7,5 +7,5 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.paths << Emoji.images_path
 
 # Precompile additional assets.
-# engine_template.js, engine_template.css, and all non-JS/CSS in app/assets folder are already added.
+# cve_engine.js, cve_engine.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
