@@ -1,25 +1,15 @@
-# CveEngine
+# Introduction
 
-Template for quickly creating new Rails engine.
+_cve_engine_ is a Rails engine intended to manage CVEs.
 
 
-## Installation
+# Installation
 
-### Gemfile
+## Gemfile
 
 Add these lines to your application's Gemfile:
 
     gem 'cve_engine'
-
-And then execute:
-
-    $ bundle install
-
-### Gemspec
-
-Add this line to your gemspec file:
-
-    spec.add_runtime_dependency 'cve_engine'
 
 And then execute:
 
@@ -33,7 +23,7 @@ To use the engine in a Rails application add the engine to the Gemfile and creat
     $ rake cve_engine:install:migrations
 
 
-## Test
+# Test
 
 To launch the tests suite:
 
@@ -45,7 +35,7 @@ To launch the test suite with coverage:
     $ $BROWSER coverage/index.html
 
 
-## Documentation
+# Documentation
 
 Yard is based on RDoc with some improvements.
 
@@ -64,17 +54,6 @@ To dynamically preview the doc (automatically refreshed):
     $ yard server --reload
 
 
-## Template Usage
-
-To create a new engine from the template:
-
-1. Fork it
-2. Clone the new repository
-3. Run the script with the new gem name `cd <new_name>; ./bin/create_gem <new_name>`
-4. Edit the README
-5. Commit the change `git commit -a -m "<new_name> gem created"`
-6. Push and set the upstream `git push --set-upstream origin master`
-
-## License
+# License
 
 Affero GPL V3 (see LICENSE file)
