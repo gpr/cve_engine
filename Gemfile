@@ -58,6 +58,7 @@ group :development, :test do
   gem 'bootstrap-sass', '~> 3.3.1'
   gem 'kaminari-bootstrap', '~> 3'
   gem 'font-awesome-rails'
+  gem 'font-awesome-sass', '~> 4.4.0'
   gem 'rails_admin'
   gem 'sqlite3'
   gem 'devise'
