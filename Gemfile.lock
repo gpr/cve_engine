@@ -122,6 +122,8 @@ GEM
     ffi (1.9.10)
     font-awesome-rails (4.5.0.1)
       railties (>= 3.2, < 5.1)
+    font-awesome-sass (4.4.0)
+      sass (>= 3.2)
     formatador (0.2.5)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
@@ -250,7 +252,7 @@ GEM
       activesupport (= 4.2.6)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    rake (11.0.1)
+    rake (10.5.0)
     rb-fsevent (0.9.7)
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
@@ -322,6 +324,7 @@ DEPENDENCIES
   factory_girl_rails
   faker
   font-awesome-rails
+  font-awesome-sass (~> 4.4.0)
   gprrr!
   guard
   guard-minitest
@@ -333,6 +336,7 @@ DEPENDENCIES
   ptools
   pundit
   rails_admin
+  rake (~> 10)
   redcarpet
   simplecov
   simplecov-rcov
