@@ -1,6 +1,8 @@
 # Introduction
 
-_cve_engine_ is a Rails engine intended to manage CVEs.
+_cve_engine_ is a Rails engine intended to manage CVEs from NIST NVD.
+
+https://nvd.nist.gov/download.cfm
 
 
 # Installation

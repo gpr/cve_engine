@@ -11,7 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150930193627) do
+ActiveRecord::Schema.define(version: 20160315214955) do
+
+  create_table "cve_engine_vulnerabilities", force: :cascade do |t|
+    t.string   "cve_id"
+    t.boolean  "is_cce_id",                default: false
+    t.datetime "discovered_datetime"
+    t.datetime "disclosure_datetime"
+    t.datetime "exploit_publish_datetime"
+    t.datetime "published_datetime"
+    t.datetime "last_modified_datetime"
+    t.string   "security_protection"
+    t.string   "summary"
+    t.datetime "created_at",                               null: false
+    t.datetime "updated_at",                               null: false
+  end
+
+  add_index "cve_engine_vulnerabilities", ["cve_id"], name: "idx_ce_v_str_id", unique: true
 
   create_table "users", force: :cascade do |t|
     t.string   "name",                               null: false
