@@ -4,6 +4,7 @@ PATH
     cve_engine (0.1.0.beta1)
       best_in_place
       kaminari
+      nokogiri
       pundit
       rails (~> 4.2)
       responders

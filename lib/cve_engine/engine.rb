@@ -5,6 +5,7 @@ require 'simple_form'
 require 'gprrr'
 require 'best_in_place'
 require 'pundit'
+require 'nokogiri'
 
 module CveEngine
   class Engine < ::Rails::Engine
