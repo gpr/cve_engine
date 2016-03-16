@@ -28,6 +28,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'best_in_place'
   s.add_dependency 'pundit'
   s.add_dependency 'nokogiri'
+  s.add_dependency 'roxml'
 
   s.add_development_dependency 'ptools'
 end
