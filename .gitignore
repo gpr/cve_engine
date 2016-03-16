@@ -12,3 +12,4 @@ doc/
 .yardoc/
 test/reports
 *.orig
+.project
