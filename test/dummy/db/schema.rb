@@ -11,7 +11,48 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160315214955) do
+ActiveRecord::Schema.define(version: 20160317215039) do
+
+  create_table "cve_engine_cpe_products", force: :cascade do |t|
+    t.string   "cpe_name",    null: false
+    t.string   "part"
+    t.string   "vendor"
+    t.string   "product"
+    t.string   "version"
+    t.string   "update_name"
+    t.string   "edition"
+    t.string   "language"
+    t.string   "sw_edition"
+    t.string   "target_sw"
+    t.string   "target_hw"
+    t.string   "other"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "cve_engine_cpe_products", ["cpe_name"], name: "idx_ce_cp_cpe_name", unique: true
+  add_index "cve_engine_cpe_products", ["edition"], name: "idx_ce_cp_edition"
+  add_index "cve_engine_cpe_products", ["language"], name: "idx_ce_cp_language"
+  add_index "cve_engine_cpe_products", ["other"], name: "idx_ce_cp_other"
+  add_index "cve_engine_cpe_products", ["part"], name: "idx_ce_cp_part"
+  add_index "cve_engine_cpe_products", ["product", "version"], name: "idx_ce_cp_product_version"
+  add_index "cve_engine_cpe_products", ["product"], name: "idx_ce_cp_product"
+  add_index "cve_engine_cpe_products", ["sw_edition"], name: "idx_ce_cp_sw_edition"
+  add_index "cve_engine_cpe_products", ["target_hw"], name: "idx_ce_cp_target_hw"
+  add_index "cve_engine_cpe_products", ["target_sw"], name: "idx_ce_cp_target_sw"
+  add_index "cve_engine_cpe_products", ["update_name"], name: "idx_ce_cp_update"
+  add_index "cve_engine_cpe_products", ["vendor", "product", "version"], name: "idx_ce_cp_vendor_product_version"
+  add_index "cve_engine_cpe_products", ["vendor", "product"], name: "idx_ce_cp_vendor_product"
+  add_index "cve_engine_cpe_products", ["vendor"], name: "idx_ce_cp_vendor"
+  add_index "cve_engine_cpe_products", ["version"], name: "idx_ce_cp_version"
+
+  create_table "cve_engine_cpe_products_vulnerabilities", force: :cascade do |t|
+    t.integer "cpe_product_id"
+    t.integer "vulnerability_id"
+  end
+
+  add_index "cve_engine_cpe_products_vulnerabilities", ["cpe_product_id"], name: "idx_ce_cp_v_cpe_product"
+  add_index "cve_engine_cpe_products_vulnerabilities", ["vulnerability_id"], name: "idx_ce_cp_v_vulnerability"
 
   create_table "cve_engine_vulnerabilities", force: :cascade do |t|
     t.string   "cve_id"
