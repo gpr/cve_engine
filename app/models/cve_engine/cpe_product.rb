@@ -5,7 +5,7 @@ module CveEngine
   class CpeProduct < ActiveRecord::Base
     # -----------------------------------------------------
     # Constants
-    COMPONENT_PATTERN = "[A-Za-z0-9\._\-~%]+"
+    COMPONENT_PATTERN = "[A-Za-z0-9\._-~%]*"
     COMPONENT_REGEX = /#{COMPONENT_PATTERN}/
     CPE_NAME_REGEX = /[c][pP][eE]:\/(?<part>[AHOaho])?(?<components>(:#{COMPONENT_PATTERN}){0,6})/
     PART_LIST = ['a', 'o', 'h']
