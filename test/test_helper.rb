@@ -31,6 +31,8 @@ require 'minitest/rails/capybara'
 require 'minitest/reporters'
 MiniTest::Reporters.use!
 
+ActiveRecord::Migration.maintain_test_schema!
+
 require 'factory_girl_rails'
 
 class MiniTest::Test
