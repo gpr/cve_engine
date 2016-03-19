@@ -44,6 +44,10 @@ module CveEngine
       PART_LIST
     end
 
+    def name
+      self.cpe_name
+    end
+
     # -----------------------------------------------------
     # Class methods
 
