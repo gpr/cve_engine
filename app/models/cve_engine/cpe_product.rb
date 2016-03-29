@@ -74,7 +74,6 @@ module CveEngine
     # rails_admin configuration
     rails_admin do
       list do
-        field :cpe_name
         field :part
         field :vendor
         field :product
@@ -100,6 +99,7 @@ module CveEngine
         field :target_sw
         field :target_hw
         field :other
+        field :vulnerabilities
       end
       edit do
         field :cpe_name
@@ -114,6 +114,7 @@ module CveEngine
         field :target_sw
         field :target_hw
         field :other
+        field :vulnerabilities
       end
 
       create do
@@ -129,6 +130,7 @@ module CveEngine
         field :target_sw
         field :target_hw
         field :other
+        field :vulnerabilities
       end
 
       update do
@@ -144,6 +146,7 @@ module CveEngine
         field :target_sw
         field :target_hw
         field :other
+        field :vulnerabilities
       end
 
       nested do
@@ -159,6 +162,7 @@ module CveEngine
         field :target_sw
         field :target_hw
         field :other
+        field :vulnerabilities
       end
 
       modal do
@@ -174,6 +178,7 @@ module CveEngine
         field :target_sw
         field :target_hw
         field :other
+        field :vulnerabilities
       end
     end
   end
