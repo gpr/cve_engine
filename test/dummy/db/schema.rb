@@ -11,7 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160317215039) do
+ActiveRecord::Schema.define(version: 20160331194556) do
+
+  create_table "cve_engine_base_metrics_sets", force: :cascade do |t|
+    t.integer  "vulnerability_id"
+    t.decimal  "score",                  null: false
+    t.decimal  "exploit_subscore"
+    t.decimal  "impact_subscore"
+    t.string   "access_vector"
+    t.string   "access_complexity"
+    t.string   "authentication"
+    t.string   "confidentiality_impact"
+    t.string   "integrity_impact"
+    t.string   "availability_impact"
+    t.datetime "generated_on_datetime"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  add_index "cve_engine_base_metrics_sets", ["vulnerability_id"], name: "idx_ce_bms_vulnerability"
 
   create_table "cve_engine_cpe_products", force: :cascade do |t|
     t.string   "cpe_name",    null: false
